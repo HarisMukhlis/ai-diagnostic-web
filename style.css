@@ -1,0 +1,83 @@
+/* Custom CSS for Hospital Aesthetic */
+
+/* Skema Warna: Biru Dongker (Navy), Teal, Putih */
+:root {
+    --color-navy: #0B2447; /* Biru Dongker */
+    --color-teal: #159897; /* Teal / Biru Aksen */
+    --color-light-gray: #f8f9fa; /* Latar Belakang Body */
+    --color-primary-dark: #1e3a5f; /* Untuk tombol primary */
+}
+
+/* Navbar Color */
+.bg-navy {
+    background-color: var(--color-navy) !important;
+}
+
+/* Header/Accent Color */
+.bg-teal {
+    background-color: var(--color-teal) !important;
+}
+
+/* Primary Button/Accent Color Override */
+.btn-primary {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-navy);
+    border-color: var(--color-navy);
+}
+/* Custom CSS untuk memperbesar judul header */
+#header-title {
+    font-size: 2rem; 
+}
+/* Custom CSS untuk ukuran logo di header */
+.img-logo {
+    height: 1.5em; 
+    width: auto; 
+    vertical-align: middle; 
+}
+/* Webcam Container and Bounding Box Logic */
+.webcam-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#webcamFeed {
+    display: block; 
+}
+
+/* Overlay Gelap dengan Jendela Transparan di Tengah */
+#bounding-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    
+    /* Membuat efek mask menggunakan Box Shadow */
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6); 
+    
+    /* Membuat jendela transparan di tengah */
+    border: 3px solid white; 
+    border-radius: 5px;
+    
+    /* Mengatur posisi di tengah */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%; 
+    height: 75%;
+    
+    z-index: 10;
+}
+
+/* Ukuran optimal untuk gambar output */
+#output-image {
+    max-height: 300px;
+    object-fit: contain;
+}
